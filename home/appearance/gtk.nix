@@ -15,8 +15,8 @@
       size = 32;
     };
     font = {
-      package = pkgs.noto-fonts-cjk-sans;
-      name = "Noto Sans CJK SC";
+      package = null;
+      name = "Source Han Sans SC";
       size = null;
     };
     colorScheme = null;

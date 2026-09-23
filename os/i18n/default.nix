@@ -15,7 +15,6 @@
         waylandFrontend = true;
         addons = with pkgs; [
           fcitx5-gtk
-          fcitx5-mellow-themes
           fcitx5-rime
         ];
       };

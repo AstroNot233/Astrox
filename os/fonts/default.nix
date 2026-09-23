@@ -1,36 +1,34 @@
-{ pkgs, ... }: {
+{ pkgs, plangothic, hostPlatform, ... }: {
   fonts = {
-  	enableDefaultPackages = false;
-  	enableGhostscriptFonts = false;
-  	fontDir.enable = true;
-  	packages = with pkgs; [
-  	  corefonts
-  	  source-han-sans
-  	  source-han-serif
-  	  noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
+    enableDefaultPackages = false;
+    enableGhostscriptFonts = false;
+    fontDir.enable = true;
+    packages = with pkgs; [
+      corefonts
+      source-han-sans
+      source-han-serif
+      noto-fonts
       noto-fonts-color-emoji
+      plangothic.packages.${hostPlatform}.default
       jetbrains-mono
       nerd-fonts.symbols-only
-  	];
-  	fontconfig = {
+    ];
+    fontconfig = {
       defaultFonts = {
         emoji = [
           "Noto Color Emoji"
-          "Symbols Nerd Font"
         ];
         monospace = [
           "JetBrains Mono"
-          "Noto Sans Mono CJK SC"
           "Symbols Nerd Font Mono"
         ];
         sansSerif = [
-          "Noto Sans CJK SC"
-          "Symbols Nerd Font"
+          "Source Han Sans SC"
+          "Plangothic P1"
+          "Plangothic P2"
         ];
         serif = [
-          "Noto Serif CJK SC"
-          "Symbols Nerd Font"
+          "Source Han Serif SC"
         ];
       };
     };

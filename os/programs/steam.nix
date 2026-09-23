@@ -1,7 +1,9 @@
 { pkgs, ... }: {
   programs.steam = {
     enable = true;
-    fontPackages = [ pkgs.noto-fonts-cjk-sans ];
+    fontPackages = [];
+    extest.enable = true;
+    gamescopeSession.enable = true;
     protontricks.enable = true;
   };
 }

@@ -20,6 +20,10 @@
       url = "github:AstroNot233/X-Minecraft-Launcher-Flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plangothic = {
+      url = "path:/flakes/Plangothic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs: rec {
     globalArgs = inputs // {
