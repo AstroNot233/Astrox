@@ -1,0 +1,67 @@
+binds {
+    // Hotkeys
+    Mod+Slash repeat=false { show-hotkey-overlay; }
+    Super+Return repeat=false hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
+
+    // Fn keys
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute         allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioMicMute      allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+    XF86AudioPlay         allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioPause        allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioStop         allow-when-locked=true { spawn-sh "noctalia msg media stop"; }
+    XF86AudioPrev         allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+    XF86AudioNext         allow-when-locked=true { spawn-sh "noctalia msg media next"; }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
+
+    // Focus
+    Mod+Left      { focus-column-left-or-last;   }
+    Mod+Right     { focus-column-right-or-first; }
+    Mod+Up        { focus-window-up-or-bottom;   }
+    Mod+Down      { focus-window-down-or-top;    }
+    Mod+Page_Up   { focus-workspace-up;   }
+    Mod+Page_Down { focus-workspace-down; }
+    // Move
+    Mod+Ctrl+Left      { move-column-left;    }
+    Mod+Ctrl+Right     { move-column-right;   }
+    Mod+Ctrl+Up        { move-window-up;      }
+    Mod+Ctrl+Down      { move-window-down;    }
+    Mod+Ctrl+Page_Up   { move-workspace-up;   }
+    Mod+Ctrl+Page_Down { move-workspace-down; }
+    // Resize
+    Mod+Shift+Left      { set-window-width "-10%";  }
+    Mod+Shift+Right     { set-window-width "+10%";  }
+    Mod+Shift+Up        { set-window-height "-10%"; }
+    Mod+Shift+Down      { set-window-height "+10%"; }
+    Mod+Shift+Page_Up   { maximize-window-to-edges; }
+    Mod+Shift+Page_Down { fullscreen-window;        }
+    Mod+Shift+Home      { set-window-width "50%";   }
+    Mod+Shift+End       { set-window-width "100%";  }
+
+    // Window Management
+    Mod+O          repeat=false { toggle-overview; }
+    Mod+Escape     repeat=false { close-window; }
+    Mod+C          repeat=false { center-visible-columns; }
+    Mod+F          repeat=false { expand-column-to-available-width; }
+    Mod+T          repeat=false { toggle-column-tabbed-display; }
+    Mod+Space      repeat=false { toggle-window-floating; }
+    Mod+Ctrl+Space repeat=false { switch-focus-between-floating-and-tiling; }
+
+    // Consume | Expel
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Comma  { consume-window-into-column; }
+    Mod+Period { expel-window-from-column;   }
+
+    // Screenshots
+         Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+     Alt+Print { screenshot-window; }
+
+    // Noctalia 
+    Ctrl+Alt+Delete repeat=false hotkey-overlay-title="Powermenu" { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+X repeat=false hotkey-overlay-title="Application Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Y repeat=false hotkey-overlay-title="Clipboard" { spawn-sh "noctalia msg panel-toggle clipboard"; }
+}

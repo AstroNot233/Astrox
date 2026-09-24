@@ -14,6 +14,12 @@
       shallow = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plangothic = {
+      type = "git";
+      url = "ssh://git@codeberg.org/AstroNot233/Plangothic.nix.git";
+      shallow = true;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     inputs:
@@ -30,6 +36,7 @@
           specialArgs = globalArgs;
           modules = [
             ./hardware-config.nix
+            ./os
           ];
         };
       };
@@ -38,7 +45,13 @@
           pkgs = nixpkgs.legacyPackages.${hostPlatform};
           extraSpecialArgs = globalArgs;
           modules = [
+            ./home
           ];
+        };
+      };
+      devShells = {
+        ${hostPlatform}.default = nixpkgs.legacyPackages.${hostPlatform}.mkShell {
+          packages = with nixpkgs.legacyPackages.${hostPlatform}; [ ];
         };
       };
       formatter = {

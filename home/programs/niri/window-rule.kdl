@@ -1,0 +1,30 @@
+window-rule {
+    open-focused false
+    clip-to-geometry true
+    draw-border-with-background false
+}
+
+window-rule {
+    match is-active=false is-window-cast-target=false
+    opacity 0.875
+}
+
+window-rule {
+    match is-active=false is-floating=true
+    baba-is-float true
+}
+
+window-rule {
+    match app-id=r#"^com\.mitchellh\.ghostty$"#
+    default-column-width { proportion 0.5; }
+    default-window-height { proportion 1.0; }
+    opacity 0.875
+    open-focused true
+}
+
+window-rule {
+    match app-id=r#"^firefox"#
+    default-column-width { proportion 0.5; }
+    default-window-height { proportion 1.0; }
+    open-focused true
+}
