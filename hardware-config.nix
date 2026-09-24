@@ -1,0 +1,1 @@
+{ assets, ... }: abort assets.cfgerror
