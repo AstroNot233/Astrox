@@ -1,5 +1,5 @@
 window-rule {
-    open-focused false
+    open-focused true
     clip-to-geometry true
     draw-border-with-background false
 }
@@ -10,21 +10,27 @@ window-rule {
 }
 
 window-rule {
-    match is-active=false is-floating=true
-    baba-is-float true
-}
-
-window-rule {
     match app-id=r#"^com\.mitchellh\.ghostty$"#
     default-column-width { proportion 0.5; }
     default-window-height { proportion 1.0; }
     opacity 0.875
-    open-focused true
 }
 
 window-rule {
     match app-id=r#"^firefox"#
     default-column-width { proportion 0.5; }
     default-window-height { proportion 1.0; }
+}
+
+window-rule {
+    match app-id=r#"^QQ$"#
+    match app-id=r#"^wechat$"#
+    open-on-workspace "chat"
     open-focused true
+}
+
+window-rule {
+    match app-id=r#"^steam$"#
+    open-on-workspace "game"
+    open-focused false
 }
