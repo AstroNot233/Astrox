@@ -98,7 +98,5 @@ def gc []: nothing -> nothing {
     }
     print  '>>> nix-collect-garbage -d'
     sudo        nix-collect-garbage -d
-    print $">>> nixos-rebuild boot --flake ($astrox)"
-    sudo        nixos-rebuild boot --flake ($astrox)
     print  '>>> Done.'
 }

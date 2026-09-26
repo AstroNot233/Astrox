@@ -1,19 +1,32 @@
-{ pkgs, ... }: {
+{
+  assets,
+  pkgs,
+  ...
+}:
+{
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     loader = {
       efi = {
-        efiSysMountPoint = "/efi";
+        efiSysMountPoint = "/boot";
         canTouchEfiVariables = true;
       };
-      systemd-boot = {
+      grub = {
         enable = true;
-        consoleMode = "1";
-        editor = false;
-        edk2-uefi-shell = {
-          enable = true;
-          sortKey = "edk2-uefi-shell";
-        };
+        efiSupport = true;
+        device = "nodev";
+        gfxmodeEfi = "auto";
+        extraConfig = ''
+          if [ ! "$main" ]; then
+            configfile /theme/main.cfg
+          fi
+        '';
+        extraEntries = ''
+          menuentry "Main Menu" {
+            configfile /theme/main.cfg
+          }
+        '';
+        theme = assets."Minegrub";
       };
       timeout = 5;
     };
