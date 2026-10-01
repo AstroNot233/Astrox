@@ -10,7 +10,7 @@
     settings = {
       user = {
         name = "AstroNot233";
-        email = "tyz.err.233@gmail.com";
+        email = "xastronot233@gmail.com";
       };
       init = {
         defaultBranch = "main";

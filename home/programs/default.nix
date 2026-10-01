@@ -17,6 +17,7 @@
     ./obs-studio
     ./ssh
     ./starship
+    ./tridactyl
     ./yazi
     ./zoxide
   ];
