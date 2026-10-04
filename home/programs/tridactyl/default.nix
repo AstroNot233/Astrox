@@ -34,14 +34,18 @@ in
     })
 
     (bindModes {
+      ex.    "<Escape>" = "ex.hide_and_clear";
+      ignore."<C-Escape>" = "mode normal";
       normal."<Escape>" = "keyfeed --page <Escape>";
       visual."<Escape>" = "mode normal";
       insert."<Escape>" = "mode normal";
       input. "<Escape>" = "mode normal";
       hint.  "<Escape>" = "hint.reset";
-      ex.    "<Escape>" = "ex.hide_and_clear";
       normal."<C-Escape>" = "mode ignore";
-      ignore."<C-Escape>" = "mode normal";
+      visual."<C-Escape>" = "mode ignore";
+      insert."<C-Escape>" = "mode ignore";
+      input. "<C-Escape>" = "mode ignore";
+      hint.  "<C-Escape>" = "mode ignore";
     })
 
     (bindGroup "normal" {

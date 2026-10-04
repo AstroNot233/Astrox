@@ -3,7 +3,6 @@
     ./bat
     ./carapace
     ./fastfetch
-    ./firefox
     ./ghostty
     ./git
     ./helix
@@ -15,9 +14,9 @@
     ./noctalia
     ./nushell
     ./obs-studio
+    ./qutebrowser
     ./ssh
     ./starship
-    ./tridactyl
     ./yazi
     ./zoxide
   ];
