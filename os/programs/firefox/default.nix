@@ -1,6 +1,5 @@
 {
   lib,
-  pkgs,
   ...
 }:
 {
@@ -59,16 +58,6 @@
       AIControls.Default = {
         Value = "blocked";
       };
-      # Firefox 153 and later fetch from addons.mozilla.org by ID, so no
-      # install_url is needed; force_installed keeps it updated as well.
-      ExtensionSettings."tridactyl.vim@cmcaine.co.uk" = {
-        installation_mode = "force_installed";
-      };
-    };
-    nativeMessagingHosts = {
-      packages = with pkgs; [
-        tridactyl-native
-      ];
     };
   };
 }

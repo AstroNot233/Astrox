@@ -2,27 +2,31 @@ binds {
     // Hotkeys
     Mod+Return repeat=false { spawn "ghostty"; }
 
-    // Focus
-    Mod+H { focus-column-left-or-last;   }
-    Mod+L { focus-column-right-or-first; }
-    Mod+K { focus-window-up-or-bottom;   }
-    Mod+J { focus-window-down-or-top;    }
-    Mod+U { focus-workspace-up;   }
-    Mod+I { focus-workspace-down; }
+    // Focus. Colemak reads the home row as h n e i o; navigation uses the WASD shape
+    // on the letters at the physical i j k l keys: u=up (row above), n=left,
+    // e=down, i=right. The right pinky stays out of navigation entirely.
+    Mod+N { focus-column-left-or-last;   }
+    Mod+I { focus-column-right-or-first; }
+    Mod+U { focus-window-up-or-bottom;   }
+    Mod+E { focus-window-down-or-top;    }
+    // Workspaces sit on the two letters flanking the navigation up key: l at
+    // physical u (left of it), y at physical o (right of it). L=up, Y=down.
+    Mod+L { focus-workspace-up;   }
+    Mod+Y { focus-workspace-down; }
 
     // Move
-    Mod+Ctrl+H { move-column-left;  }
-    Mod+Ctrl+L { move-column-right; }
-    Mod+Ctrl+K { move-window-up;    }
-    Mod+Ctrl+J { move-window-down;  }
-    Mod+Ctrl+U { move-workspace-up;   }
-    Mod+Ctrl+I { move-workspace-down; }
+    Mod+Ctrl+N { move-column-left;  }
+    Mod+Ctrl+I { move-column-right; }
+    Mod+Ctrl+U { move-window-up;    }
+    Mod+Ctrl+E { move-window-down;  }
+    Mod+Ctrl+L { move-workspace-up;   }
+    Mod+Ctrl+Y { move-workspace-down; }
 
     // Resize
-    Mod+Shift+H { set-window-width "-10%";  }
-    Mod+Shift+L { set-window-width "+10%";  }
-    Mod+Shift+K { set-window-height "-10%"; }
-    Mod+Shift+J { set-window-height "+10%"; }
+    Mod+Shift+N { set-window-width "-10%";  }
+    Mod+Shift+I { set-window-width "+10%";  }
+    Mod+Shift+U { set-window-height "-10%"; }
+    Mod+Shift+E { set-window-height "+10%"; }
     Mod+backslash    repeat=false { expand-column-to-available-width; }
     Mod+BracketLeft  repeat=false { set-window-width "50%";  }
     Mod+BracketRight repeat=false { set-window-width "100%"; }
@@ -37,9 +41,10 @@ binds {
     Mod+C      repeat=false { center-visible-columns; }
     Mod+T      repeat=false { toggle-column-tabbed-display; }
 
-    // Noctalia
+    // Noctalia. The launcher is back on X (L went to the workspace pair) and the
+    // clipboard moved to V=paste (Y went to the workspace pair).
     Mod+X repeat=false { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+Y repeat=false { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+V repeat=false { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Ctrl+Alt+Delete repeat=false { spawn-sh "noctalia msg panel-toggle session"; }
 
     // Screenshots

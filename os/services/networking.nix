@@ -1,7 +1,7 @@
 { ... }: {
   networking = {
     hostName = "astrox";
-    networkmanager.enable = true;
+    # networkmanager.enable = true;
     firewall = {
       enable = true;
       checkReversePath = "loose";

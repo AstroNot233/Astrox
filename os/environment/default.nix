@@ -6,6 +6,9 @@
   ...
 }:
 {
+  imports = [
+    ./alsa-card-profile.nix
+  ];
   environment = {
     defaultPackages = lib.mkForce [ ];
     systemPackages = builtins.concatLists [
@@ -23,6 +26,7 @@
       ])
     ];
     variables = {
+      LD_LIBRARY_PATH = "/run/opengl-driver/lib";
       EDITOR = "hx";
       VISUAL = "hx";
     };
