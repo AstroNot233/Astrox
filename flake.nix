@@ -53,6 +53,7 @@
         ${hostPlatform}.default = nixpkgs.legacyPackages.${hostPlatform}.mkShell {
           packages = with nixpkgs.legacyPackages.${hostPlatform}; [
             mpich
+            pnpm
           ];
         };
       };
