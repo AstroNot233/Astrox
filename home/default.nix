@@ -5,6 +5,7 @@
 {
   imports = [
     ./appearance
+    ./i18n
     ./programs
     ./services
   ];
