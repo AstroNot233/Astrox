@@ -15,7 +15,7 @@ terminal-font: "Monocraft Regular 22"
 ### PLAY BUTTON
 + boot_menu {
     left = 50%-410
-    top = 97
+    top = 123
     width = 809
     height = 100%-289
 
@@ -37,7 +37,7 @@ terminal-font: "Monocraft Regular 22"
 ### Icon and Description
 + boot_menu {
     left = 50%-410
-    top = 97
+    top = 123
     width = 809
     height = 100%-289
 
@@ -58,7 +58,7 @@ terminal-font: "Monocraft Regular 22"
 ### default image and item name
 + boot_menu {
     left = 50%-410
-    top = 97
+    top = 123
     width = 809
     height = 100%-289
 
@@ -91,7 +91,7 @@ terminal-font: "Monocraft Regular 22"
     id = "__timeout__"
 
     left = 0
-    top = 60
+    top = 75
     height = 30
     width = 100%
 
@@ -106,7 +106,7 @@ terminal-font: "Monocraft Regular 22"
     id = "__timeout__"
 
     left = 3
-    top = 63
+    top = 78
     height = 30
     width = 100%
 
