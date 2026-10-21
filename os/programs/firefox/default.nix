@@ -12,16 +12,13 @@
     ];
     policies = {
       DisableTelemetry = true;
-      # KeePassXC owns the password store, so every built-in entry point goes:
-      # no manager, no save prompt, no address or payment autofill, no reveal.
+      # KeePassXC owns the password store.
       PasswordManagerEnabled = false;
       OfferToSaveLogins = false;
       DisablePasswordReveal = true;
       AutofillAddressEnabled = false;
       AutofillCreditCardEnabled = false;
-      # The policy is an enum, not a boolean. "allowed" keeps HTTPS-Only Mode off
-      # by default, which is what local services on 127.0.0.1 without HTTPS need,
-      # and still leaves the switch available in settings; "disallowed" removes it.
+      # Enum, not boolean: "allowed" leaves HTTPS-Only off, still switchable in settings.
       HttpsOnlyMode = "allowed";
       UserMessaging = {
         ExtensionRecommendations = false;
@@ -44,8 +41,7 @@
         Snippets = false;
         Widgets.Enabled = false;
       };
-      # Enabled = false already turns every generative AI feature off; the
-      # per-feature keys are spelled out so the set stays visible in place.
+      # Enabled = false covers every AI feature; the keys stay for visibility.
       GenerativeAI = {
         Enabled = false;
         Chatbot = false;
@@ -53,8 +49,7 @@
         LinkPreviews = false;
         TabGroups = false;
       };
-      # "blocked" on Default covers every key AIControls lists; the per-feature
-      # keys exist only to override it, so they stay unset.
+      # Default covers every key AIControls lists; per-feature keys stay unset.
       AIControls.Default = {
         Value = "blocked";
       };

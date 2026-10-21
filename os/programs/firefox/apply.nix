@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 let
   bootstrapJs = ''
     const DSH_KEYSET_ID = "dsh-keyset";
@@ -38,8 +38,7 @@ let
         const keyset = doc.getElementById("mainKeyset");
         if (!keyset) return;
 
-        // 只设 disabled，严禁摘元素或摘 key/keycode 属性：Firefox 初始化窗口时按 id
-        // 取这些元素且无 null 保护，缺一个就打不开窗口。
+        // Only set disabled: Firefox resolves these by id at startup with no null check.
         for (const key of keyset.querySelectorAll("key")) {
           key.setAttribute("disabled", "true");
         }

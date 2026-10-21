@@ -1,8 +1,7 @@
 input {
     keyboard {
-        // All xkb parameters are passed to libxkbcommon; see xkeyboard-config(7).
-        // Kept disabled with "/-"; every parameter defaults to unset, and an empty
-        // xkb section makes niri fetch the keymap from systemd-localed.
+        // Parameters go to libxkbcommon (see xkeyboard-config(7)); "/-" keeps niri on
+        // the systemd-localed keymap.
         /- xkb {
             layout "us"
             options "caps:escape_shifted_capslock"
@@ -11,13 +10,11 @@ input {
             // rules ""                     // default: unset
             // file "~/.config/keymap.xkb"  // default: unset; overrides all of the above
         }
-        // Enable numlock on startup, omitting this setting disables it.
+        // Omitting this disables numlock.
         numlock
     }
 
-    // Next sections include libinput settings.
-    // Omitting settings disables them, or leaves them at their default values.
-    // All commented-out settings here are examples, not defaults.
+    // Commented-out settings below are examples, not defaults.
     touchpad {
         // off
         tap
@@ -51,10 +48,9 @@ input {
         // middle-emulation
     }
 
-    // Uncomment this to make the mouse warp to the center of newly focused windows.
+    // Uncomment to warp the mouse to newly focused windows.
     // warp-mouse-to-focus
 
-    // Focus windows and outputs automatically when moving the mouse into them.
-    // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
+    // Focus on hover; "0%" limits it to fully visible windows.
     // focus-follows-mouse max-scroll-amount="0%"
 }

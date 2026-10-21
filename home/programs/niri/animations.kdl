@@ -1,14 +1,11 @@
-// All animations with their default values, kept disabled with "/-".
-// Remove the leading "/-" to enable the whole section, then adjust as needed.
+// All animations at their defaults, kept disabled with "/-".
 /-animations {
-    // Uncomment to turn off all animations.
-    // You can also put "off" into each individual animation to disable it.
+    // "off" disables every animation at once.
     // off
 
-    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // Values below 1 speed up.
     // slowdown 3.0
 
-    // Individual animations.
     // Spring: damping-ratio, stiffness, epsilon.
     // Easing: duration-ms, curve.
 

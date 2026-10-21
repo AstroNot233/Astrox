@@ -6,8 +6,8 @@
     ./gnupg
     ./mtr
     ./niri
-    ./noctalia
     ./nix-ld
+    ./noctalia
     ./steam
   ];
 }

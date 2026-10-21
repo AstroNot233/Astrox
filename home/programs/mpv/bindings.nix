@@ -1,10 +1,7 @@
 { ... }: ''
-  # Custom bindings, written in mpv's native input.conf syntax so the action for
-  # every key stays on one line. Loaded after the built-in defaults, hence an
-  # entry here overrides a default but never unbinds the rest of them.
+  # input.conf syntax: one action per line, loaded after mpv's own defaults.
 
-  # Emacs movement keys. mpv's own defaults are preserved: C-n/C-p duplicate the
-  # 5-second arrow seek, so holding either key stays a useful coarse seek.
+  # Emacs movement keys.
   Ctrl+n  seek 5          # emacs line down
   Ctrl+p  seek -5         # emacs line up
   Ctrl+f  frame-step      # emacs char right
@@ -19,8 +16,7 @@
   Alt+<   playlist-prev   # emacs beginning-of-buffer, previous file
   Alt+x   script-binding console/enable # emacs M-x, mpv's own ` is kept
 
-  # Mouse. The defaults are written out so the intended click and wheel
-  # behaviour is visible in place; MBTN_LEFT stays unbound for the OSC.
+  # Mouse: defaults written out; MBTN_LEFT stays unbound for the OSC.
   MBTN_LEFT      ignore
   MBTN_LEFT_DBL  cycle fullscreen
   MBTN_RIGHT     cycle pause

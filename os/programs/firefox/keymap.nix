@@ -66,7 +66,7 @@ let
   ];
 in
 {
-  # 动作只写成函数：chrome 文档 CSP 拦掉 win.eval 与内联 oncommand，字符串会静默丢失。
+  # Actions must be functions: chrome CSP blocks win.eval and inline oncommand.
   actionsJs = ''
     const dshSelectTab = (win, step) => {
       const tabs = win.gBrowser.tabs;

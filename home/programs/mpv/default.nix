@@ -1,8 +1,7 @@
 { ... }: {
   programs.mpv = {
     enable = true;
-    # extraInput keeps the grouping comments of bindings.nix, which the
-    # alphabetically rendered bindings option would drop.
+    # extraInput keeps bindings.nix's grouping comments; the bindings option drops them.
     extraInput = import ./bindings.nix { };
     config = import ./config.nix { };
   };

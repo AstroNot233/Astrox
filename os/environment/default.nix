@@ -15,6 +15,7 @@
       [ home-manager.packages.${hostPlatform}.home-manager ]
       (with pkgs; [
         wl-clipboard
+        vial
         gnumake
         busybox
         ntfs3g

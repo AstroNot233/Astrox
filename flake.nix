@@ -54,6 +54,7 @@
           packages = with nixpkgs.legacyPackages.${hostPlatform}; [
             mpich
             pnpm
+            go
           ];
         };
       };

@@ -1,5 +1,4 @@
 { ... }: {
-  # Use sudo-rs instead of sudo.
   security.sudo.enable = false;
   security.sudo-rs = {
     enable = true;
