@@ -20,6 +20,12 @@
       shallow = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    axlmc = {
+      type = "git";
+      url = "ssh://git@github.com/Axolotl-Launcher/Axolotl.git";
+      ref = "refs/tags/v1.10.0";
+      shallow = true;
+    };
   };
   outputs =
     inputs:
@@ -45,6 +51,7 @@
           pkgs = nixpkgs.legacyPackages.${hostPlatform};
           extraSpecialArgs = globalArgs;
           modules = [
+            axlmc.homeModules
             ./home
           ];
         };

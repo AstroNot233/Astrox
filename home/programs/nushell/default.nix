@@ -5,6 +5,7 @@
     envFile.source = ./env.nu;
     environmentVariables = { };
     loginFile.source = null;
+    loadSessionVariables = true;
     plugins = [ ];
     settings = {
       history = {

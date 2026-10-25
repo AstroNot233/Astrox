@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./axlmc
     ./bat
     ./carapace
     ./fastfetch

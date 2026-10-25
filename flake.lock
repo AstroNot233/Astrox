@@ -1,5 +1,27 @@
 {
   "nodes": {
+    "axlmc": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1792757416,
+        "narHash": "sha256-IBN8VeB1eDmPumpJOsJfpQgoddc9Lp/1L+jNSA2TLVQ=",
+        "ref": "refs/tags/v1.10.0",
+        "rev": "b3a3c2425b2a9c2ba8c57a2ebb353d029ab63636",
+        "shallow": true,
+        "submodules": true,
+        "type": "git",
+        "url": "ssh://git@github.com/Axolotl-Launcher/Axolotl.git"
+      },
+      "original": {
+        "ref": "refs/tags/v1.10.0",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/Axolotl-Launcher/Axolotl.git"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -7,10 +29,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1792495086,
-        "narHash": "sha256-TyoYH983Nsc++1scw0SoOEKshPSJWJDxK7tTmuZ974M=",
+        "lastModified": 1792818371,
+        "narHash": "sha256-yhEZAzZRNvzYpoAlyFY3wM75V9BmkIXJIueof8S5gOg=",
         "ref": "master",
-        "rev": "ec80131710bffcdf3b8498cf41f3a0579833b023",
+        "rev": "2cd3234928f60bbff695a7ee56115ef7799c47cd",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/nix-community/home-manager.git"
@@ -26,8 +48,24 @@
       "locked": {
         "lastModified": 1792502884,
         "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
-        "ref": "nixos-unstable",
+        "owner": "nixos",
+        "repo": "nixpkgs",
         "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1792773339,
+        "narHash": "sha256-rZLrzrC6i+jnTAlvPZHogKDulY7WWDEv9hJeHieO7Zw=",
+        "ref": "nixos-unstable",
+        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/NixOS/nixpkgs.git"
@@ -62,9 +100,31 @@
     },
     "root": {
       "inputs": {
+        "axlmc": "axlmc",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "plangothic": "plangothic"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "axlmc",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792653800,
+        "narHash": "sha256-E8zFJilWlORqzIUJizyhZ/0WKBOizuM6s1nRSgPRomo=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "5f267b7f323a4d6df0b9c0e3eaa043cbe85386f2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     }
   },
