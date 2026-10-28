@@ -47,4 +47,12 @@ binds {
          Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
      Alt+Print { screenshot-window; }
+
+    // Output transform: the panel is mounted upside down, so 180 is what the
+    // physical screen needs, while a Moonlight client only gets an upright
+    // image at normal. Temporary -- not written back to output.kdl.
+    Mod+Shift+Up    repeat=false { spawn "niri" "msg" "output" "eDP-1" "transform" "normal"; }
+    Mod+Shift+Right repeat=false { spawn "niri" "msg" "output" "eDP-1" "transform" "90";     }
+    Mod+Shift+Down  repeat=false { spawn "niri" "msg" "output" "eDP-1" "transform" "180";    }
+    Mod+Shift+Left  repeat=false { spawn "niri" "msg" "output" "eDP-1" "transform" "270";    }
 }

@@ -23,7 +23,7 @@
     axlmc = {
       type = "git";
       url = "ssh://git@github.com/Axolotl-Launcher/Axolotl.git";
-      ref = "refs/tags/v1.10.0";
+      ref = "nomore-db/settings";
       shallow = true;
     };
   };
